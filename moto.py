@@ -6,4 +6,11 @@ class Moto(Veiculo):
         self.cilindrada = cilindrada
 
     def __str__(self):
-        return f"{super().__str__()}, Cilindrada: {self.cilindrada}cc"
+        return f"{super().__str__()}, Cilindrada: {self.cilindrada}"
+    
+    def ligar(self):
+        if not self._ligado:
+            self._ligado = True
+            print(f"{self.marca} {self.modelo} ligado.")
+        else:
+            print(f"{self.marca} {self.modelo} já está ligado.")
